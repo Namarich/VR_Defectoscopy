@@ -1,0 +1,76 @@
+{
+    "name": "VRInputActions",
+    "maps": [
+        {
+            "name": "Controller",
+            "id": "8d086462-2c06-469b-9adb-1009c9f3559e",
+            "actions": [
+                {
+                    "name": "Spray",
+                    "type": "Button",
+                    "id": "85573fa3-ac52-41fb-aecc-c889c8d4b09a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Spray1",
+                    "type": "Value",
+                    "id": "97fc94be-7313-4539-bce9-c1043e801203",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "95a5d787-e4ec-48d9-9612-421a4563cfa5",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spray",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89014df3-fc07-4ff7-a3a5-6cf5cea003a5",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spray1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b64e2ab1-67d6-4b7b-babd-6b5a6250fd6b",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spray1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be76fa9b-928a-4900-b98e-9b933717724a",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spray1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
