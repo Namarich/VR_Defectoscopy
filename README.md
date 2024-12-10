@@ -1,3 +1,7 @@
 # VR_Defectoscopy
  
-Handy project for emloyee training
+Handy little project for defectoscopy training.
+
+
+
+Made by a solo guy
