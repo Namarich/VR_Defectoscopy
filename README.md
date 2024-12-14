@@ -4,4 +4,4 @@ Handy little project for defectoscopy training.
 
 
 
-Made by a solo guy
+Made by a solo guy named Vasilevskiy Roman
