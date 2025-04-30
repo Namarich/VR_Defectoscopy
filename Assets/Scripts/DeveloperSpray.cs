@@ -10,7 +10,7 @@ public class DeveloperSpray : MonoBehaviour
     {
         if (other.CompareTag("TargetSurface"))  // Проверяем, что проявитель направлен на нужную поверхность
         {
-            defectoscopyProcess.ApplyDeveloper();  // Вызываем метод для нанесения проявителя
+            //defectoscopyProcess.ApplyDeveloper();  // Вызываем метод для нанесения проявителя
         }
     }
 
@@ -24,7 +24,7 @@ public class DeveloperSpray : MonoBehaviour
             if (hit.transform.gameObject.tag == "Finish" && gameObject.GetComponent<SprayController>().isSpraying)
             {
                 Debug.Log("Yahoo");
-                defectoscopyProcess.ApplyDeveloper();
+                //defectoscopyProcess.ApplyDeveloper();
             }
         }
     }

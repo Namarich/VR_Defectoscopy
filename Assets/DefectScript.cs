@@ -21,7 +21,7 @@ public class DefectScript : MonoBehaviour
 
     public void IGotFound()
     {
-        d.FindDefect();
+        //d.FindDefect();
         gameObject.SetActive(false);
     }
 }

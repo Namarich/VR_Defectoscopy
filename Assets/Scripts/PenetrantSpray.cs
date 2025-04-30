@@ -10,7 +10,7 @@ public class PenetrantSpray : MonoBehaviour
     {
         if (other.CompareTag("TargetSurface"))  // Проверяем, что пенетрант направлен на нужную поверхность
         {
-            defectoscopyProcess.ApplyPenetrant();  // Вызываем метод, который фиксирует распыление
+            //defectoscopyProcess.ApplyPenetrant();  // Вызываем метод, который фиксирует распыление
         }
     }
 
@@ -25,7 +25,7 @@ public class PenetrantSpray : MonoBehaviour
             if(hit.transform.gameObject.tag == "Finish" && gameObject.GetComponent<SprayController>().isSpraying)
             {
                 Debug.Log("Yahoo");
-                defectoscopyProcess.ApplyPenetrant();
+                //defectoscopyProcess.ApplyPenetrant();
             }
         }
     }

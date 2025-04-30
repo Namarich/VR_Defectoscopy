@@ -10,7 +10,7 @@ public class UVLamp : MonoBehaviour
     {
         if (other.CompareTag("TargetSurface"))  // Проверяем, что лампа направлена на нужную поверхность
         {
-            defectoscopyProcess.UseUVLamp();  // Активируем проверку с помощью УФ-лампы
+            //defectoscopyProcess.UseUVLamp();  // Активируем проверку с помощью УФ-лампы
         }
     }
 
@@ -24,7 +24,7 @@ public class UVLamp : MonoBehaviour
             if (hit.transform.gameObject.tag == "Finish" && gameObject.GetComponent<SprayController>().isSpraying)
             {
                 Debug.Log("Yahoo");
-                defectoscopyProcess.UseUVLamp();
+                //defectoscopyProcess.UseUVLamp();
             }
         }
     }
