@@ -25,6 +25,7 @@ public class UVLamp : MonoBehaviour
             {
                 Debug.Log("Yahoo");
                 //defectoscopyProcess.UseUVLamp();
+                hit.transform.gameObject.GetComponent<Pipe>().UseUVLamp();
             }
         }
     }

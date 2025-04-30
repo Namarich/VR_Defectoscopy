@@ -26,6 +26,7 @@ public class PenetrantSpray : MonoBehaviour
             {
                 Debug.Log("Yahoo");
                 //defectoscopyProcess.ApplyPenetrant();
+                hit.transform.gameObject.GetComponent<Pipe>().ApplyPenetrant();
             }
         }
     }

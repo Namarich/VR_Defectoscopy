@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -37,6 +38,8 @@ public class Pipe : MonoBehaviour
     public TimeManager penetrantTime;
 
     public TimeManager showerTime;
+
+    public TMP_Text timeOfSprayingText;
     
 
     // Start is called before the first frame update
@@ -52,9 +55,10 @@ public class Pipe : MonoBehaviour
         {
             isPenetrantApplied = true;
             ChangeTablet(1);
-            Invoke("ProceedToDeveloperStep", 5f);
+            //Invoke("ProceedToDeveloperStep", 5f);
             penetrantTime.startingMinutes = manager.minutes;
             penetrantTime.startingHours = manager.hours;
+            timeOfSprayingText.text = $"нанесение пенетранта: {penetrantTime.startingHours}:{penetrantTime.startingMinutes}";
             // Ожидание 5 секунд перед следующим шагом
 
         }
@@ -63,10 +67,10 @@ public class Pipe : MonoBehaviour
     {
         for (int i = 0; i < numberOfDamages; i++)
         {
-            float angle = i * Mathf.PI * 2 / numberOfDamages + Random.Range(1, 90);
+            float angle = i * Mathf.PI * 2 / numberOfDamages + Random.Range(1, 180);
             Vector3 spawnPosition = new Vector3(Mathf.Cos(angle) * damageRadius, 0, Mathf.Sin(angle) * damageRadius);
             GameObject a = Instantiate(damageObject, tablets[tablet].transform.position + spawnPosition, Quaternion.identity);
-            a.transform.SetParent(tablets[2].transform);
+            a.transform.SetParent(gameObject.transform);
         }
     }
 
@@ -169,6 +173,23 @@ public class Pipe : MonoBehaviour
     public void YouHaveFailed()
     {
         SceneManager.LoadScene("Demo");
+    }
+
+    public void ShowTimeOfSprayingText()
+    {
+        if (!isDeveloperApplied)
+        {
+            timeOfSprayingText.gameObject.SetActive(true);
+        }
+        
+    }
+
+    public void HideTimeOfSprayingText()
+    {
+        if (!isDeveloperApplied)
+        {
+            timeOfSprayingText.gameObject.SetActive(false);
+        }
     }
 
 }

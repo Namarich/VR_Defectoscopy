@@ -25,6 +25,7 @@ public class DeveloperSpray : MonoBehaviour
             {
                 Debug.Log("Yahoo");
                 //defectoscopyProcess.ApplyDeveloper();
+                hit.transform.gameObject.GetComponent<Pipe>().ApplyDeveloper();
             }
         }
     }
