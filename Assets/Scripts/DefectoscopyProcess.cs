@@ -14,6 +14,11 @@ public class DefectoscopyProcess : MonoBehaviour
     public TMP_Text clockText;
 
     public List<Pipe> pipes;
+
+    public Transform learningSpawnPoint;
+    public Transform trainingSpawnPoint;
+
+    public GameObject player;
     void Start()
     {
         feedbackText.text = "Начнем с подготовки поверхности. Возьмите баллончик с пенетрантом(красный балончик).";
@@ -43,5 +48,15 @@ public class DefectoscopyProcess : MonoBehaviour
     public void SetTheFeedbackText(string text)
     {
         feedbackText.text = text;
+    }
+
+    public void Learning()
+    {
+        player.transform.position = learningSpawnPoint.position;
+    }
+
+    public void Training()
+    {
+        player.transform.position = trainingSpawnPoint.position;
     }
 }
